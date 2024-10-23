@@ -4,6 +4,10 @@
     --text-accent-font: 'PressStart2P', sans-serif;
     --text-font-weight: 400;
     --title-font-weight: 700;
-    --themes-background: white;
+    --themes-background: #FFF;
+    --themes-border-color: #000;
     --accent-color: #000;
+    --themes-background-image: repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 }
