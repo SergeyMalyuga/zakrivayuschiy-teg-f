@@ -52,32 +52,35 @@
     <section class="content__main-section">
         <article class="card content__card">
             <h1 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h1>
-            <section class="card__image">
-                <img src="./images/image.png" alt="image"/>
-            </section>
-            <section class="card__description">
-                <p>Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И,
+            <div class="card__image-box">
+                <img class="card__image" src="./images/image.png" alt="image"/>
+                <p class="card__label">&lt;/html&gt;</p>
+            </div>
+            <div class="card__description-box">
+                <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и
+                    настроиться на учёбу. И,
                     возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
-                <p>Место для ваших воспоминаний о начале обучения.</p>
-            </section>
-            <section class="card__actions">
+                <p class="card__text">Место для ваших воспоминаний о начале обучения.</p>
+            </div>
+            <div class="card__actions-box">
                 <button class="card__button card__icon-button" type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="27" height="24" viewBox="0 0 39 36">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="39" height="36" viewBox="0 0 39 36">
                         <path fill="currentColor"
                               d="M12 6H9v3h3V6ZM15 6h-3v3h3V6ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM18 6h-3v3h3V6ZM12 18H9v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 6h3v3h-3V6ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6ZM27 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 24h3v3h-3v-3ZM21 9h-3v3h3V9ZM21 27h-3v3h3v-3Z"/>
                     </svg>
                 </button>
                 <button class="card__button card__like-button" type="button"><span class="button__text">Like</span>
                 </button>
-            </section>
+            </div>
         </article>
     </section>
     <section class="content__actions">
         <button class="content__button">
-            <svg width="28" height="28">
+            <svg class="floppy">
                 <use href="./svg/floppy.svg#floppy"/>
             </svg>
-            Сохранить на память</button>
+            Сохранить на память
+        </button>
     </section>
 </main>
 <script src="./scripts/like.js"></script>

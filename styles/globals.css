@@ -37,6 +37,12 @@ input {
   font-size: inherit;
 }
 
+button {
+  cursor: pointer;
+  font-family: var(--text-accent-font);
+  font-size: 14px;
+}
+
 ul,
 ol {
   list-style: none;
