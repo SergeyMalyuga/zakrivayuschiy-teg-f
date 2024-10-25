@@ -10,6 +10,8 @@
     --themes-background: #000;
     --themes-border-color: #00CC14;
     --accent-color: #00CC14;
+    --stroke-color: #000;
+    --button-text-color: #00CC14;
     --themes-background-image: repeating-linear-gradient(to left, #000 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #007f0c, #004306);
@@ -21,6 +23,8 @@
     --themes-background: #FFF;
     --themes-border-color: #000;
     --accent-color: #000;
+    --stroke-color: #FFF;
+    --button-text-color: #FFF;
     --themes-background-image: repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
@@ -33,6 +37,8 @@
         --themes-background: #000;
         --themes-border-color: #00CC14;
         --accent-color: #00CC14;
+        --stroke-color: #000;
+        --button-text-color: #00CC14;
         --themes-background-image: repeating-linear-gradient(to left, #000 0 2px, transparent 2px 4px),
         repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
         repeating-linear-gradient(to bottom, #007f0c, #004306);
