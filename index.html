@@ -85,7 +85,19 @@
         </article>
     </section>
     <section class="content__actions">
-        <button class="content__button">
+        <dialog class="dialog content__dialog" id="content-dialog">
+            <div class="dialog__content">
+                <svg class="floppy">
+                    <use href="./svg/floppy.svg#floppy"/>
+                </svg>
+                <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+            </div>
+            <button class="dialog__button" type="button" onclick="window['content-dialog'].close()"
+                    aria-controls="content-dialog"><span
+                    class="button__text">ok</span></button>
+        </dialog>
+        <button class="content__button" type="button" onclick="window['content-dialog'].showModal()"
+                aria-controls="content-dialog">
             <svg class="floppy">
                 <use href="./svg/floppy.svg#floppy"/>
             </svg>

@@ -225,7 +225,8 @@ img {
 }
 
 .card__like-button::before,
-.content__button::before {
+.content__button::before,
+.dialog__button::before {
     content: "";
     position: absolute;
     inset-block-start: 0;
@@ -239,12 +240,20 @@ img {
     transition: transform 0.5s ease-in-out
 }
 
-.card__like-button:hover::before {
+.card__like-button:hover::before,
+.dialog__button:hover::before {
     transform: scaleX(1);
 }
 
-.card__like-button:focus {
+.card__like-button:focus,
+.content__button:focus,
+.dialog__button:focus {
     outline: none;
+}
+
+.card__like-button:focus-visible,
+.content__button:focus-visible,
+.dialog__button:focus-visible {
     box-shadow: 2px 2px var(--accent-color);
     transition: box-shadow 0.3s ease;
 }
@@ -361,6 +370,52 @@ img {
     mix-blend-mode: difference;
 }
 
+.content__dialog {
+    min-inline-size: var(--dialog-min-width);
+    min-block-size: var(--dialog-min-height);
+    background-color: var(--themes-background);
+    /*color: var(--accent-color);*/
+    color: var(--button-text-color);
+    font-family: var(--text-accent-font);
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 2px solid var(--themes-border-color);
+}
+.content__dialog::backdrop {
+    background-color: #000;
+    opacity: 0.75;
+}
+
+.content__dialog[open] .floppy {
+    fill: var(--accent-color);
+    min-inline-size: 39px;
+    min-block-size: 39px;
+}
+
+.content__dialog[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 40px;
+    justify-content: center;
+}
+
+.dialog__content {
+    display: flex;
+    gap: 20px;
+}
+
+.dialog__text {
+    mix-blend-mode: difference;
+}
+
+.dialog__button {
+    position: relative;
+    min-inline-size: var(--dialog-button-min-width);
+    min-block-size: var(--dialog-button-min-height);
+    border: 2px solid var(--themes-border-color);
+    background-color: transparent;
+}
 
 @media (width <= 375px) {
     .floppy {
