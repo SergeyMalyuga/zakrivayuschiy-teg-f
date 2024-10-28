@@ -1,4 +1,3 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
     --text-main-font: 'Inter-Variable', sans-serif;
     --text-accent-font: 'PressStart2P', sans-serif;
@@ -11,8 +10,6 @@
     --button-text-color: #FFF;
     --heart-contur-color: #000;
     --heart-fill-color: #FF0000;
-    --dialog-min-width: 341px;
-    --dialog-min-height: 195px;
     --dialog-button-min-width: 257px;
     --dialog-button-min-height: 38px;
     --themes-background-image: repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),

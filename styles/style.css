@@ -17,7 +17,7 @@
 .page {
     min-inline-size: 320px;
     min-block-size: 100dvb;
-    padding-inline: clamp(0px, calc(100% - 1024px), 372px);
+    padding-inline: clamp(0px, calc(100% - 1024px), 370px);
     font-family: var(--text-main-font);
     font-variation-settings: 'wght' var(--text-font-weight);
     font-size: 18px;
@@ -36,7 +36,6 @@
     flex-direction: column;
     align-items: center;
     margin-block: 100px;
-    /*padding-inline: 14px;*/
     font-family: var(--text-accent-font);
     font-size: 14px;
     font-style: normal;
@@ -50,7 +49,7 @@
     font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     font-weight: 400;
     text-transform: uppercase;
-    margin-block-start: 120px;
+    margin-block-start: 136px;
     margin-block-end: 20px;
 }
 
@@ -61,8 +60,7 @@
 }
 
 .theme-menu {
-    align-self: start;
-    margin-inline-start: 154px;
+    margin-left: 16px;
 }
 
 .theme-menu__list {
@@ -105,7 +103,7 @@
     position: absolute;
     inset-block-end: -1px;
     inset-inline-start: 0;
-    background-color: black;
+    background-color: var(--accent-color);
     height: 2px;
     width: 100%;
     transform: scaleX(0);
@@ -134,6 +132,34 @@
     animation-direction: alternate;
 }
 
+.casey-horner {
+    filter: brightness(150%) saturate(60%) hue-rotate(90deg);
+}
+
+.light-bulbs {
+    filter: sepia(70%);
+}
+
+.moon {
+    filter: saturate(130%);
+}
+
+.night-field {
+    filter: grayscale(1);
+}
+
+.night-forest {
+    filter: blur(2px) brightness(3) hue-rotate(30deg) saturate(1.5);
+}
+
+.starry-sky {
+    filter: brightness(0.8) contrast(1.2) grayscale(0.5);
+}
+
+.sunset-mountains {
+    filter: saturate(115%) opacity(0.85);
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -142,7 +168,14 @@
     background-color: var(--themes-background);
 }
 
-img {
+.content__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.card__image {
     width: 100%;
     height: auto;
 }
@@ -153,7 +186,7 @@ img {
     line-height: 23px;
     padding-inline: 10px;
     padding-block-start: 4px;
-    min-block-size: 56px;
+    min-block-size: 35px;
     border: 2px solid var(--themes-border-color);
 }
 
@@ -163,17 +196,12 @@ img {
     border-bottom: 2px solid var(--themes-border-color);
 }
 
-.card__image {
-    display: block;
-}
-
 .card__label {
     position: absolute;
-    inset-block-start: 20px;
-    inset-inline-end: 11px;
+    inset-block-start: 25px;
+    inset-inline-end: 25px;
     font-family: var(--text-accent-font);
     font-size: 14px;
-    text-transform: uppercase;
     text-shadow: 0 0 0 0 var(--stroke-color);
     opacity: 0.5;
     mix-blend-mode: hard-light;
@@ -273,13 +301,6 @@ img {
     transition: fill 0.3s linear;
 }
 
-.like-icon.is-liked .heart {
-    animation-name: heart-scale;
-    animation-delay: 0.1s;
-    animation-duration: 0.3s;
-    animation-timing-function: ease-in;
-}
-
 .core {
     fill: transparent;
     transition: fill 0.3s linear;
@@ -354,8 +375,8 @@ img {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    min-inline-size: 335px;
-    min-block-size: 51px;
+    min-inline-size: 339px;
+    min-block-size: 55px;
     border: 2px solid var(--themes-border-color);
     color: var(--button-text-color);
 }
@@ -371,16 +392,16 @@ img {
 }
 
 .content__dialog {
-    min-inline-size: var(--dialog-min-width);
-    min-block-size: var(--dialog-min-height);
+    max-inline-size: 361px;
+    min-block-size: 197px;
     background-color: var(--themes-background);
-    /*color: var(--accent-color);*/
     color: var(--button-text-color);
     font-family: var(--text-accent-font);
     font-size: 14px;
     text-transform: uppercase;
     border: 2px solid var(--themes-border-color);
 }
+
 .content__dialog::backdrop {
     background-color: #000;
     opacity: 0.75;
@@ -415,6 +436,7 @@ img {
     min-block-size: var(--dialog-button-min-height);
     border: 2px solid var(--themes-border-color);
     background-color: transparent;
+    text-transform: uppercase;
 }
 
 @media (width <= 375px) {
@@ -427,38 +449,31 @@ img {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-inline-size: 306px;
-        min-block-size: 80px;
+        min-inline-size: 310px;
+        min-block-size: 84px;
+    }
+
+    .header__title-large {
+        margin-block-start: 120px;
+    }
+
+    .theme-menu {
+        margin-left: 21px;
+    }
+
+    .card__label {
+        inset-block-start: 20px;
+        inset-inline-end: 11px;
+    }
+
+    .content__item:first-child .card__title {
+        min-block-size: 56px;
+    }
+
+    .content__dialog {
+        max-inline-size: 345px;
+        min-block-size: 199px;
     }
 }
 
-@keyframes arrow-movement {
-    from {
-        transform: translatex(0);
-    }
-    to {
-        transform: translatex(4px);
-    }
-}
-
-@keyframes heart-scale {
-    from {
-        scale: 1;
-    }
-    50% {
-        scale: 1.2;
-    }
-    to {
-        scale: 1;
-    }
-}
-
-@keyframes spark {
-    50% {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
 
