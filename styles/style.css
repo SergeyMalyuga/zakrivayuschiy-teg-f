@@ -22,7 +22,7 @@
     font-variation-settings: 'wght' var(--text-font-weight);
     font-size: 18px;
     font-style: normal;
-    line-height: 21px;
+    line-height: 1.1666666666666667em;
     color: var(--accent-color);
     background-color: var(--themes-background);
     background-image: var(--themes-background-image);
@@ -80,17 +80,16 @@
     min-inline-size: 84px;
     min-block-size: 14px;
     cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:disabled {
     pointer-events: none;
     opacity: 0.6;
-    transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:hover {
     opacity: 0.6;
-    transition: opacity 0.3s ease;
 }
 
 .button__name {
@@ -207,7 +206,10 @@
     inset-inline-end: 25px;
     font-family: var(--text-accent-font);
     font-size: 14px;
-    text-shadow: 0 0 0 0 var(--stroke-color);
+    text-shadow: -1px 0 var(--stroke-color),
+    0 1px var(--stroke-color),
+    1px 0 var(--stroke-color),
+    0 -1px var(--stroke-color);
     opacity: 0.5;
     mix-blend-mode: hard-light;
 }
@@ -240,7 +242,7 @@
     border-bottom: 2px solid var(--themes-border-color);
 }
 
-.card__button, .content__button {
+.button {
     background-color: transparent;
     padding: 0;
 }
@@ -257,9 +259,7 @@
     mix-blend-mode: difference;
 }
 
-.card__like-button::before,
-.content__button::before,
-.dialog__button::before {
+.button::before {
     content: "";
     position: absolute;
     inset-block-start: 0;
@@ -273,20 +273,15 @@
     transition: transform 0.5s ease-in-out
 }
 
-.card__like-button:hover::before,
-.dialog__button:hover::before {
+.button:hover::before {
     transform: scaleX(1);
 }
 
-.card__like-button:focus,
-.content__button:focus,
-.dialog__button:focus {
+.button:focus {
     outline: none;
 }
 
-.card__like-button:focus-visible,
-.content__button:focus-visible,
-.dialog__button:focus-visible {
+.button:focus-visible:not(.card__icon-button) {
     box-shadow: 2px 2px var(--accent-color);
     transition: box-shadow 0.3s ease;
 }
@@ -359,6 +354,7 @@
     animation-name: spark;
     animation-delay: 0.3s;
     animation-duration: 0.3s;
+    animation-timing-function: ease-in;
 }
 
 .card__icon-button:focus {
@@ -399,7 +395,6 @@
 
 .content__dialog {
     max-inline-size: 361px;
-    min-block-size: 197px;
     background-color: var(--themes-background);
     color: var(--button-text-color);
     font-family: var(--text-accent-font);
@@ -478,7 +473,6 @@
 
     .content__dialog {
         max-inline-size: 345px;
-        min-block-size: 199px;
     }
 }
 
