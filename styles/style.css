@@ -265,7 +265,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: var(--button-animation-background);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s ease-in-out

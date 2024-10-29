@@ -6,6 +6,7 @@
     --accent-color: #00CC14;
     --stroke-color: #000;
     --button-text-color: #00CC14;
+    --button-animation-background: #FFF;
     --heart-contur-color: #00CC14;
     --themes-background-image: repeating-linear-gradient(to left, #000 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
@@ -20,6 +21,7 @@
     --accent-color: #000;
     --stroke-color: #FFF;
     --button-text-color: #FFF;
+    --button-animation-background: #000;
     --heart-contur-color: #000;
     --themes-background-image: repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
@@ -35,6 +37,7 @@
         --accent-color: #00CC14;
         --stroke-color: #000;
         --button-text-color: #00CC14;
+        --button-animation-background: #FFF;
         --heart-contur-color: #00CC14;
         --themes-background-image: repeating-linear-gradient(to left, #000 0 2px, transparent 2px 4px),
         repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
@@ -51,6 +54,7 @@
         --accent-color: #000;
         --stroke-color: #FFF;
         --button-text-color: #FFF;
+        --button-animation-background: #000;
         --heart-contur-color: #000;
         --themes-background-image: repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
         repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
