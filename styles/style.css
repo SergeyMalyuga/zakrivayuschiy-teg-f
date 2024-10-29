@@ -107,17 +107,16 @@
     width: 100%;
     transform: scaleX(0);
     transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
 .theme-menu__button:focus {
     outline: none;
     opacity: 0.6;
-    transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus-visible .button__name::after {
     transform: scaleX(1);
-    transition: transform 0.3s ease;
 }
 
 .theme-menu__button:disabled::before {
@@ -131,31 +130,31 @@
     animation-direction: alternate;
 }
 
-.casey-horner {
+.filter-mixed-brightness {
     filter: brightness(150%) saturate(60%) hue-rotate(90deg);
 }
 
-.light-bulbs {
+.filter-sepia {
     filter: sepia(70%);
 }
 
-.moon {
+.filter-saturate {
     filter: saturate(130%);
 }
 
-.night-field {
+.filter-grayscale {
     filter: grayscale(1);
 }
 
-.night-forest {
+.filter-mixed-blur {
     filter: blur(2px) brightness(3) hue-rotate(30deg) saturate(1.5);
 }
 
-.starry-sky {
+.filter-mixed-contrast {
     filter: brightness(0.8) contrast(1.2) grayscale(0.5);
 }
 
-.sunset-mountains {
+.filter-mixed-saturate {
     filter: saturate(115%) opacity(0.85);
 }
 
@@ -290,6 +289,7 @@
     padding: 0;
     block-size: 38px;
     border: 2px solid transparent;
+    transition: fill 0.3s linear;
 }
 
 .contour {
@@ -309,35 +309,29 @@
 
 .card__icon-button:hover .main-body {
     fill: var(--accent-color);
-    transition: fill 0.3s linear;
     transition-delay: 0.05s;
 }
 
 .card__icon-button:hover .core {
     fill: var(--accent-color);
-    transition: fill 0.3s linear;
 }
 
 .card__icon-button:active .main-body {
     fill: var(--heart-fill-color);
-    transition: fill 0.3s linear;
     transition-delay: 0.05s;
 }
 
 .card__icon-button:active .core {
     fill: var(--heart-fill-color);
-    transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
     fill: var(--heart-fill-color);
-    transition: fill 0.3s linear;
     transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .core {
     fill: var(--heart-fill-color);
-    transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .contour {
