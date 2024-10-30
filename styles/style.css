@@ -291,41 +291,6 @@
     transition-delay: 0.03s;
 }
 
-/*.card__icon-button:hover .main-body {
-Здесь и далее надо добавить transition по заданию
-}
-Какие именно transition вы имеете ввиду? По тз transition соблюдены.
-
-Основное тело сердца при наведении курсора перекрашивайте с задержкой в 0.05s в течение 0.3s.
-А когда курсор уходит с сердца, основное тело, наоборот, становится прозрачным без задержек и
-перекрашивается всё те же 0.3s
-
-.main-body { <----- основной селектор
-    fill: transparent;
-    transition: fill 0.3s linear; работате в обе стороны
-}
-
-.card__icon-button:hover .main-body {
-    fill: var(--accent-color);
-    transition-delay: 0.05s; задержка при наведении.
-}
-
-
-Меняйте значение у сердцевины сразу же при наведении мышки и в течение 0.3s. А в
-обратной ситуации, когда курсор уходит, — с задержкой в 0.03s
-
-.core { <----- основной селектор
-    fill: transparent;
-    transition: fill 0.3s linear; работате в обе стороны
-    transition-delay: 0.03s; курсор уходит, — с задержкой в 0.03s
-}
-
-.card__icon-button:hover .core {
-    fill: var(--accent-color);
-    transition-delay: 0s; сразу же при наведении. (в прошлой версии кода упустил этот момент,
-    менялось с задержкой 0.03s. Возможно вы имели ввиду эту часть кода?)
-} */
-
 .card__icon-button:hover .main-body {
     fill: var(--accent-color);
     transition-delay: 0.05s;
@@ -348,10 +313,12 @@
 
 .like-icon.is-liked .main-body {
     fill: var(--heart-fill-color);
+    transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .core {
     fill: var(--heart-fill-color);
+    transition-delay: 0s;
 }
 
 .like-icon.is-liked .contour {
